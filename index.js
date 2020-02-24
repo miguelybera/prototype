@@ -1,18 +1,12 @@
-function Student(name, section, course){
+let stud1 = {name:"Pedro Cruz" , course:"CS", section:"2csb" };
+let stud2 = {name:"Pepe Smith" , course:"Architecture", section:"lar5"};
 
-    this.name = name;
-    this.section = section;
-    this.course = course;
 
+
+
+let displayInfo = function(){
+    document.write(`<h2> ${this.name}, ${this.course} is enrolled in section ${this.section}`);
 }
 
-let stud1 = new Student("Cathy Garcia", "2ITB", "IT");
-let stud2 = new Student("Pedro Morales", "2ITE", "IT");
-
-Student.prototype.school = "UST";
-Student.prototype.study = function(subject){
-    console.log(`${this.name} is enrolled in ${subject}`)
-}
-
-console.log(`${stud2.name} is studying in ${stud2.school}`)
-stud1.study("ICS2609");
+displayInfo.call(stud1);
+displayInfo.call(stud2);
