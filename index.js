@@ -1,15 +1,10 @@
-let stud1 = {
-    name : "Pedro Cruz"
+let stud1 = {fname: "Juan", lname:"Dela Cruz"};
+let stud2 = {fname: "Pedro", lname:"Morales"};
+
+let fullname = function(){
+    return this.fname +" "+this.lname;
+
+    
 }
-let stud2 = {
-    name :"Pepe Smith"
-};
-info = ["2ITB", "IT"];
-
-
-
-let displayInfo = function(section, course){
-    document.write(`<h2> ${this.name}, ${course} is enrolled in section ${section}`);
-}
-
-displayInfo.apply(stud2, info);
+let x = fullname.bind(stud2);
+    console.log(x());
