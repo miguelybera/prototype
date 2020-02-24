@@ -1,12 +1,15 @@
-let stud1 = {name:"Pedro Cruz" , course:"CS", section:"2csb" };
-let stud2 = {name:"Pepe Smith" , course:"Architecture", section:"lar5"};
+let stud1 = {
+    name : "Pedro Cruz"
+}
+let stud2 = {
+    name :"Pepe Smith"
+};
+info = ["2ITB", "IT"];
 
 
 
-
-let displayInfo = function(){
-    document.write(`<h2> ${this.name}, ${this.course} is enrolled in section ${this.section}`);
+let displayInfo = function(section, course){
+    document.write(`<h2> ${this.name}, ${course} is enrolled in section ${section}`);
 }
 
-displayInfo.call(stud1);
-displayInfo.call(stud2);
+displayInfo.apply(stud2, info);
