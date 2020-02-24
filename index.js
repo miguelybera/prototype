@@ -1,13 +1,32 @@
 class Student{
-    constructor(name, course, section){
+    setName(name){
         this.name = name;
-        this.course= course;
+    }
+    getName(){
+        return this.name;
+    }
+    setSection(section){
         this.section = section;
     }
+    getSection(){
+        return this.section;
+    }
+    setCourse(course){
+        this.course = course;
+    }
+    getCourse(){
+        return this.course;
 
-    static enroll(subject){
-        console.log(`${this.name} is enrolled in ${subject}`);
+    }
+
+    showInfo(){
+        console.log(`${this.name}, ${this.course} is enrolled in section ${this.section}`);
     }
 }
-let stud1 = new Student("Juan Dela Cruz", "Nursing", "1Nu2")
-Student.enroll("Biology");
+let stud = new Student();
+stud.setName("Juan Dela Cruz");
+stud.setCourse("Engineering");
+
+stud.setSection("2CE6");
+console.log(stud.getName());
+stud.showInfo();
